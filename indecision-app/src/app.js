@@ -1,5 +1,5 @@
 /**
- * root Indecision component (maintains options array state)
+ * root Indecision component
  */
 class IndecisionApp extends React.Component {
   constructor(props) {
@@ -129,6 +129,7 @@ class Option extends React.Component {
 class AddOption extends React.Component {
   constructor(props) {
     super(props);
+    
     this.handleAddOption = this.handleAddOption.bind(this);
     this.state = {
       error: undefined,
@@ -145,6 +146,7 @@ class AddOption extends React.Component {
       return { error };
     });
   }
+  
   render() {
     return (
       <div>
