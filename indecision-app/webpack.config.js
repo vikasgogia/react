@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require("path");
 
 module.exports = {
   entry: "./src/app.js",
@@ -13,10 +13,14 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
       },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
     ],
   },
-  devtool: "cheap-module-eval-source-map",
+  devtool: "eval-cheap-module-source-map",
   devServer: {
-    contentBase: path.join(__dirname, "public"),
+    static: path.join(__dirname, "public"),
   },
 };
