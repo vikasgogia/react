@@ -1,0 +1,17 @@
+.usp-item-image {
+    min-height: 100%;
+}
+
+.usp-container {
+    background-color: $black;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.usp-item-container {
+    padding: $m-size;
+    background-color: $off-black;
+    color: $white;
+    margin: $m-size;
+}

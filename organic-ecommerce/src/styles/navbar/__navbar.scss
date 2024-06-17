@@ -1,0 +1,23 @@
+.nav-container {
+    height: $xl-size;
+    padding: $s-size;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between; /* space b/w left & right tabs */
+    align-items: center;
+}
+
+.nav-container .nav-left,
+.nav-container .nav-right {
+    display: flex;
+    align-items: center; /* vertical centering */
+}
+
+.nav-logo {
+    height: $xl-size;
+    margin-right: $m-size;
+}
+
+.nav-element {
+    margin: auto $s-size;
+}
