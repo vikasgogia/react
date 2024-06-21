@@ -1,0 +1,37 @@
+.product_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: $l-image;
+    padding: $s-size;
+}
+
+.product_image {
+    width: $l-image;
+    height: $l-image;
+    object-fit: contain;
+    object-position: center;
+}
+
+.product_element {
+    text-align: center;
+    margin: $xxs-size;
+    text-transform: capitalize;
+}
+
+.product_category {
+    color: $light-grey;
+}
+
+.product_title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.prod-carusel_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
