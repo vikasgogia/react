@@ -2,13 +2,13 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Product from './Product';
 
-const ProductCarousel = () => {
+const ProductCarousel = ({ url }) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
         (async () => {
             try {
-                const response = await axios.get("https://fakestoreapi.com/products?limit=4");
+                const response = await axios.get(url);
                 setProducts(response.data);
             } catch (error) {
                 console.log("error in loading products data", error);
@@ -18,7 +18,7 @@ const ProductCarousel = () => {
     }, []);
 
     return (
-        <div className="prod-carusel_container">
+        <div className="prod-carousel_container">
             {products.map((prod) => <Product key={prod.title} product={prod} /> )}
         </div>
         

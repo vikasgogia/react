@@ -2,7 +2,8 @@ import React from 'react';
 import Navbar from './navbar/Navbar';
 import Banner from './banner/Banner';
 import Usp from './usp/Usp';
-import ProductCarousel from './products/ProductCarousel';
+import BestProducts from './products/BestProducts';
+import CategoryCarousel from './category/CategoryCarousel';
 
 export default class EcommerceApp extends React.Component {
 
@@ -12,7 +13,9 @@ export default class EcommerceApp extends React.Component {
                 <Navbar />
                 <Banner />
                 <Usp />
-                <ProductCarousel />
+                <BestProducts />
+                <CategoryCarousel />
+                <BestProducts url="https://fakestoreapi.com/products/category/jewelery?limit=4" title="Top Jewelery" />
             </>
         );
     }
