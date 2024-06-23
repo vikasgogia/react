@@ -39,3 +39,44 @@
     padding: 0.8em 1.6em;
     text-transform: uppercase;
 }
+
+.review_container {
+    flex-direction: row;
+    margin: 0 $l-size;
+    padding: $l-size;
+    max-width: 18rem;
+    max-height: 26rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.review_container .review_element {
+    align-items: center;
+    margin: $s-size;
+}
+
+.review_container p {
+    text-align: center;
+}
+
+.review_client {
+    align-items: center;
+}
+
+.review_client > img {
+    width: $xs-image;
+    height: $xs-image;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: 0 $s-size;
+}
+
+.review-carousel__container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
