@@ -4,27 +4,28 @@ import { addExpense, removeExpense, editExpense } from './reducers/expenses';
 import AppRouter from './routers/AppRouter';
 
 function App() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  console.log("App trigerred!");
 
-  // const expense = { 
-  //   id: uuid(), 
-  //   description: "test description", 
-  //   note: "hi there", 
-  //   amount: 400,
-  //   createdAt: Date.now() 
-  // };
+  const expense1 = { 
+    id: uuid(), 
+    description: "test description", 
+    note: "hi there", 
+    amount: 400,
+    createdAt: Date.now() 
+  };
 
-  // dispatch(addExpense(expense));
+  dispatch(addExpense(expense1));
 
-  // console.log(useSelector((state) => state));
+  const expense2 = { 
+    id: uuid(), 
+    description: "water bill", 
+    note: "hi there", 
+    amount: 4000,
+    createdAt: Date.now() 
+  };
 
-  // dispatch(editExpense({ id: expense.id, amount: 1000 }));
-
-  // console.log(useSelector((state) => state));
-
-  // dispatch(removeExpense(expense.id));
-
-  // console.log(useSelector((state) => state));
+  dispatch(addExpense(expense2));
   
   return <AppRouter />;
 }
