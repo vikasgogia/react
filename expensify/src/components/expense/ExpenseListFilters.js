@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { setTextFilter, sortByAmount, sortByDate, setStartDate, setEndDate } from '../../reducers/filters';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const ExpenseListFilters = () => {
     const dispatch = useDispatch();
@@ -16,6 +18,18 @@ const ExpenseListFilters = () => {
         }
     }
 
+    const onStartDateChange = (date) => {
+        if(date) {
+            dispatch(setStartDate(Math.floor(date.getTime())));
+        }
+    }
+
+    const onEndDateChange = (date) => {
+        if(date) {
+            dispatch(setEndDate(Math.floor(date.getTime())));
+        }
+    }
+
     return (
         <div>
             <input type="text" defaultValue={filters.text} onChange={onTextChange}/>
@@ -23,6 +37,18 @@ const ExpenseListFilters = () => {
                 <option value="date">Date</option>
                 <option value="amount">Amount</option>
             </select>
+            
+            <span>Start Date:</span>
+            <DatePicker
+                selected={filters.startDate ? new Date(filters.startDate) : null} 
+                onChange={onStartDateChange} 
+                placeholderText="Select Start Date"/>
+
+            <span>End Date:</span>
+            <DatePicker 
+                selected={filters.endDate ? new Date(filters.endDate) : null} 
+                onChange={onEndDateChange} 
+                placeholderText="Select End Date"/>
         </div>
     );
 };

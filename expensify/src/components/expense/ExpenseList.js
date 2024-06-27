@@ -4,8 +4,10 @@ import ExpenseListItem from './ExpenseListItem';
 import getFilteredExpenses from '../../selectors/expenses';
 
 const ExpenseList = () => {
-    const state = useSelector((state) => state);
-    const expenses = getFilteredExpenses(state.expenses, state.filters);
+    const expenses = getFilteredExpenses(
+        useSelector((state) => state.expenses), 
+        useSelector((state) => state.filters)
+    );
 
     return(
         <div>
