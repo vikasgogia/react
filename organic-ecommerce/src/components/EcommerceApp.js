@@ -5,6 +5,7 @@ import Usp from './usp/Usp';
 import BestProducts from './products/BestProducts';
 import CategoryCarousel from './category/CategoryCarousel';
 import CustomerCarousel from './customer-review/CustomerCarousel';
+import ProductPage from './products/ProductPage';
 
 export default class EcommerceApp extends React.Component {
 
@@ -12,12 +13,15 @@ export default class EcommerceApp extends React.Component {
         return (
             <>
                 <Navbar />
-                <Banner />
-                <Usp />
-                <BestProducts />
-                <CategoryCarousel />
-                <BestProducts url="https://fakestoreapi.com/products/category/jewelery?limit=4" title="Top Jewelery" />
-                <CustomerCarousel />
+                {/* <>
+                    <Banner />
+                    <Usp />
+                    <BestProducts />
+                    <CategoryCarousel />
+                    <BestProducts url="https://fakestoreapi.com/products/category/jewelery?limit=4" title="Top Jewelery" />
+                    <CustomerCarousel />
+                </> */}
+                <ProductPage />
             </>
         );
     }

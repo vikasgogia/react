@@ -1,0 +1,15 @@
+.product-page__wrapper {
+    padding: 5% 8%;
+    background-color: bisque;
+}
+
+.product-details-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-details-image {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+}
